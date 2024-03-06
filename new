@@ -3,7 +3,7 @@ from datetime import datetime
 # Задаем начальную дату
 start_date = datetime(2023,10, 1)
 
-# Получаем текущую дату
+# Получаем текущую дату!
 current_date = datetime.now()
 
 # Вычисляем разницу в днях
