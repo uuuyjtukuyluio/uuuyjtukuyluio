@@ -1,0 +1,41 @@
+// В этой игре компьютер загадывает случайное число, а игрок должен угадать его за наименьшее количество попыток.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Угадай число</title>
+</head>
+<body>
+  <h1>Угадай число от 1 до 100</h1>
+  <input type="number" id="guessField">
+  <button onclick="checkGuess()">Проверить</button>
+  <p id="message"></p>
+
+  <script>
+    // Генерируем случайное число от 1 до 100
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+
+    function checkGuess() {
+      const guess = parseInt(document.getElementById('guessField').value);
+      const message = document.getElementById('message');
+
+      if (isNaN(guess) || guess < 1 || guess > 100) {
+        message.textContent = 'Пожалуйста, введите число от 1 до 100.';
+        return;
+      }
+
+      attempts++;
+
+      if (guess === randomNumber) {
+        message.textContent = `Поздравляем! Вы угадали число ${randomNumber} за ${attempts} попыток.`;
+      } else if (guess < randomNumber) {
+        message.textContent = 'Загаданное число больше. Попробуйте еще раз.';
+      } else {
+        message.textContent = 'Загаданное число меньше. Попробуйте еще раз.';
+      }
+    }
+  </script>
+</body>
+</html>
