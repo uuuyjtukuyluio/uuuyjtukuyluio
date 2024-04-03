@@ -31,9 +31,9 @@
       if (guess === randomNumber) {
         message.textContent = `Поздравляем! Вы угадали число ${randomNumber} за ${attempts} попыток`;
       } else if (guess < randomNumber) {
-        message.textContent = 'Загаданное число больше. Попробуйте еще раз!';
+        message.textContent = 'Загаданное число больше. Попробуйте еще раз';
       } else {
-        message.textContent = 'Загаданное число меньше. Попробуйте еще раз!';
+        message.textContent = 'Загаданное число меньше. Попробуйте еще раз';
       }
     }
   </script>
