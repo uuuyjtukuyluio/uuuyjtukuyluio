@@ -28,9 +28,6 @@
 
       attempts++;
 
-
-
-
       if (guess === randomNumber) {
         message.textContent = `Поздравляем! Вы угадали число ${randomNumber} за ${attempts} попыток`;
       } else if (guess < randomNumber) {
