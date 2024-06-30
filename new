@@ -11,3 +11,5 @@ delta = current_date - start_date
 
 # Выводим количество дней
 print(f"Прошло {delta.days} дней")
+
+
